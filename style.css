@@ -1,0 +1,257 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+h3{
+    font-family: 'Open Sans', sans-serif;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    
+}
+#main{
+    border-bottom: 5px solid grey;
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('imgs/img.jpg');
+   /* background-image: url('imgs/img.jpg');*/
+    background-size: cover;
+    background-position: center;
+}
+#head{
+    display: flex;
+    justify-content: space-between;
+}
+#subhead{
+    text-align: center;
+    padding: 15% 0;
+}
+
+body{
+    background: white;
+}
+
+#sign-in{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+    
+
+}
+label {
+    position: relative;
+    display: inline-block;
+  }
+  
+  input {
+    width: 400px;
+    height: 50px;
+    padding-left: 1%;
+    background-color: rgb(100, 92, 92);
+    border-radius: 5px;
+    border-color: rgb(141, 136, 136);
+    margin-right: 5px;
+    
+  }
+  input[type="email"]:valid{
+    border: 2px solid green;
+  }
+  input[type="email"]:invalid{
+    border: 2px solid red;
+   
+  }
+  span {
+    position: absolute;
+    left: 5%;
+    top: 30%;
+    bottom: 50%;
+    transition: 0.2s;
+    opacity: 0.5;
+    color: black;
+    font-size: medium;
+    font-weight: normal;
+  }
+  
+  input:focus + span {
+    opacity: 1;
+    transform: translateY(-140%) scale(0.8);
+  }
+
+.start-btn{
+    width: 150px;
+    height: 50px;
+    padding: 10px;
+    color:white;
+    background: red;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 20px;
+    margin-left: 10px;
+}
+
+
+#button{
+    width: 100px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    color: white;
+    background-color: red;
+    border-block-color: red;
+    border-radius: 5px;
+}
+.tittle-font{
+    font-size: 50px; 
+    font-weight: bold;color: white;
+}
+h3{
+    color: white;
+}
+h1{
+    color:rgb(197, 67, 67);
+}
+h2{
+    color: white;
+}
+h4{
+    color: white;
+}
+div-container{
+    margin: 0 20%;
+}
+
+
+.contents{
+    padding: 10% 15%;
+    text-align: center;
+    border-top: 5px solid grey ;
+    border-bottom: 5px solid grey;
+    display: flex;
+    background-color: black;
+}
+
+.contents-container{
+    display: flex;
+}
+.sub-c{
+    padding: 40% 0;
+}
+footer{
+    background-color: black;
+    padding: 2% 15%;
+}
+#footer-container{
+    margin: 2% 0;
+    /*padding: 0 15%;*/
+    display: flex;
+    flex-direction: column; 
+    background-color: black;   
+}
+#footer-row{
+    display: flex;
+    justify-content: space-between;
+    margin: 5% 0;
+
+}
+li{
+    list-style: none;
+    margin: 8% 0;
+}
+a{
+    color: white;
+
+}
+#contentFAQ{
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    padding: 0 15%;
+    align-items: center;
+    border-top: 5px solid grey;
+    border-bottom: 5px solid grey;
+
+}
+
+.accordion{
+    max-width: 1200px;
+    
+}
+
+.accordion .contentBx{
+    position: relative;
+    margin: 10px 20px;
+
+}
+.accordion .contentBx .label{
+    position: relative;
+    padding: 3%;
+    background-color: grey;
+    color: white;
+    font-size: larger;
+    cursor: pointer;
+}
+.accordion .contentBx .label::before{
+    content: '+';
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    font-size: 1.5em;
+}
+
+.accordion .contentBx.active .label::before{
+    content: '-';
+}
+.accordion .contentBx .content{
+    position: relative;
+    background: grey;
+    height: 0;
+    overflow: hidden;
+    transition: 0.5s;
+    
+}
+
+.accordion .contentBx.active .content{
+    height: auto;
+    padding: 1.5rem;
+}
+
+@media(max-width: 600px){
+    /**{
+        padding: 0;
+        margin: 0;
+    }*/
+    .contents-container{
+        display: flex;
+        flex-direction: column;
+    }
+    .Content-img{
+        width: 100%;
+        height: auto;
+    }
+    .contents-container-sml{
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    
+    #sign-in{
+    display: flex;
+    flex-direction: column;
+    margin: 5% 10%;
+    
+    }
+    input 
+    {
+        margin: 5% auto;
+        width: auto;
+        height: 50px;
+    }
+    span 
+    {
+        position: absolute;
+        left: 5%;
+        top: 30%;
+        bottom: 50%
+    }
+    input:focus + span
+    {
+        opacity: 1;
+        transform: translateY(-100%) scale(0.8);
+    }
+}
